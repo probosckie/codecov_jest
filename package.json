@@ -1,7 +1,7 @@
 {
   "name": "codecov_jest",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is a test description",
   "main": "hello_world.js",
   "scripts": {
     "test": "jest --coverage"

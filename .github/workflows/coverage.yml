@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x]
 
     steps:
     - name: Checkout repository
@@ -26,6 +26,8 @@ jobs:
     
     - name: Run the tests
       run: npm test -- --coverage
-      
+
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
